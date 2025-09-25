@@ -5,26 +5,26 @@ import { BufferConfig as TraceBufferConfig } from "@opentelemetry/sdk-trace-web"
 export interface OtelConfig {
     resourcesAttributes: {
         name: string;
-        version?: string;
+        version: string;
     };
-    instrumentations: {
-        eventNames: EventName[];
+    instrumentations?: {
+        eventNames?: EventName[];
     };
     headers?: Record<string, string>;
     traces: {
         url: string;
-        traceExporterConfig: any;
+        traceExporterConfig?: any;
         batchTraceProcessorConfig?: TraceBufferConfig;
     };
     logs: {
         url: string;
-        logExporterConfig: any;
+        logExporterConfig?: any;
         loggerProviderConfig?: LoggerProviderConfig;
         batchLogProcessorConfig?: BufferConfig;
     };
     metrics: {
         url: string;
-        metricExporterConfig: any;
+        metricExporterConfig?: any;
         meterReaderConfig?: PeriodicExportingMetricReaderOptions;
     };
 }
