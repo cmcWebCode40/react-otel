@@ -1,0 +1,15 @@
+import { WebTracerProvider } from "@opentelemetry/sdk-trace-web";
+import { MeterProvider } from "@opentelemetry/sdk-metrics";
+import { LoggerProvider } from "@opentelemetry/sdk-logs";
+import * as opentelemetry from "@opentelemetry/api";
+import * as apiLogs from "@opentelemetry/api-logs";
+import { SeverityNumber } from "@opentelemetry/api-logs";
+import { OtelConfig } from "./types";
+declare let meterProvider: MeterProvider | undefined;
+declare let traceProvider: WebTracerProvider | undefined;
+declare let loggerProvider: LoggerProvider | undefined;
+export declare function initOtel(config: OtelConfig): void;
+export declare function getMeter(name: string, version?: string): opentelemetry.Meter;
+export declare function getTracer(name: string, version?: string): opentelemetry.Tracer;
+export declare function getLogger(name: string, version?: string): apiLogs.Logger;
+export { SeverityNumber, traceProvider, meterProvider, loggerProvider };
