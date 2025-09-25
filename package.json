@@ -1,6 +1,6 @@
 {
   "name": "react-otel",
-  "version": "0.1.0-beta",
+  "version": "0.1.2-beta",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "description": "Flexible OpenTelemetry integration for React web apps",
